@@ -66,9 +66,12 @@ window.addEventListener('load', () => {
 
       
 
-        const liP = document.createElement("p");
+        const liP = document.createElement("input");
         liP.classList.add("liP");
-        liP.innerText = task;
+        liP.type = "text";
+        liP.value = task;
+        liP.setAttribute("readonly" , "readonly")
+        // liP.innerText = task;
         listli.appendChild(liP);
 
         const iconBox = document.createElement("div");
@@ -82,8 +85,12 @@ window.addEventListener('load', () => {
         rightbtn.classList.add("i2");
         rightbtn.innerHTML = ` <i class="fa fa-check"> </i> `;
 
+         const editbtn = document.createElement("i");
+        editbtn.classList.add("i3");
+        editbtn.innerHTML = ` <i class="fa fa-edit"> </i> `;
 
         iconBox.appendChild(delbtn);
+        iconBox.appendChild(editbtn);
         iconBox.appendChild(rightbtn);
         listli.appendChild(iconBox);
 
@@ -91,6 +98,64 @@ window.addEventListener('load', () => {
         listUl.appendChild(listli);
 
         inp.value = "";
+
+        delbtn.addEventListener("click", () => {
+            // listli.style.display = "none";
+            listUl.removeChild(listli);
+        });
+
+        rightbtn.addEventListener("click", () => {
+
+            if (rightbtn.innerHTML.toLocaleLowerCase() == ` <i class="fa fa-check"> </i> `) {
+                 listli.style.backgroundColor = "#b8ceb2dc";
+                iconBox.style.background= "transparent";
+                editbtn.style.background = "#b8ceb2dc";
+                rightbtn.style.background = "#b8ceb2dc";
+                delbtn.style.background = "#b8ceb2dc";
+
+            }else{
+                listli.style.backgroundColor = "#fce283";
+                iconBox.style.background= "fce283";
+                editbtn.style.background = "#ffd000";
+                rightbtn.style.background = "#ffd000";
+                delbtn.style.background = "#ffd000";
+            }
+                
+ 
+        });
+
+         editbtn.addEventListener("click", ( ) => {
+
+             if (editbtn.innerHTML.toLocaleLowerCase() == ` <i class="fa fa-edit"> </i> `) {
+                 
+                listli.style.backgroundColor = "#abedf1c6";
+                iconBox.style.background= "transparent";
+                editbtn.style.background = "#abedf1c6";
+                rightbtn.style.background = "#abedf1c6";
+                 delbtn.style.background = "#abedf1c6";
+                 
+                 liP.focus();
+                 liP.removeAttribute("readonly");
+                
+                 editbtn.innerHTML = ` <i class="fa fa-save"> </i> `;
+             } else {
+                 liP.setAttribute("readonly", "readonly");
+                 editbtn.innerHTML = ` <i class="fa fa-edit"> </i> `;
+
+                listli.style.backgroundColor = "#fce283";
+                iconBox.style.background= "fce283";
+                editbtn.style.background = "#ffd000";
+                rightbtn.style.background = "#ffd000";
+                delbtn.style.background = "#ffd000";
+                
+             }
+ 
+            
+
+         })
+        
+        
+       
         
 
     });

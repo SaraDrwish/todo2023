@@ -139,7 +139,7 @@ flex-wrap: wrap;
 main .botom-div-todo .botom-list-todo{
     list-style: none;
     padding: 11px;
-    width: 30%;
+    width: 40%;
     /* display: none; */
 }
 
@@ -147,6 +147,7 @@ main .botom-div-todo .botom-list-todo .botom-listli{
     padding: 11px;
     margin: 4%  0;
     background-color: var(--color5lightYell);
+    /* background-color: #b8ceb2dc; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,8 +157,10 @@ main .botom-div-todo .botom-list-todo .botom-listli{
     -ms-border-radius: 50px  0px  0px 50px;
     -o-border-radius: 50px  0px  0px 50px;
 }
+
+
 main .botom-div-todo .botom-list-todo .botom-listli .liP{
-    width: 50%;
+     width: 50%;
     padding: 10px;
     background-color: var(--color5lightYell);
     color: var(--mainColor);
@@ -172,19 +175,21 @@ main .botom-div-todo .botom-list-todo .botom-listli .icon-box {
  margin: auto;
  background-color: var(--color5lightYell);
  display: flex;
- justify-content: space-evenly;
+ justify-content:end;
+    /* justify-content: space-evenly; */
 }
 i {
     background-color: unset;
 }
-main .botom-div-todo .botom-list-todo .botom-listli  .icon-box .i1 ,
- main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2   {
-    padding: 12px;
-    width: 40%;
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1 ,
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2 , 
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i3  {
+    padding: 11px;
+    width: 33%;
     text-align: center;
     background-color: var(--mainColor) ;
     color: var(--color3darkPur);
-    margin: auto;
+    margin: 4px ;
     border-radius: 50px;
     cursor: pointer;
     transition: all .2s ease;
@@ -202,12 +207,17 @@ main .botom-div-todo .botom-list-todo .botom-listli .icon-box i:nth-child(1):hov
 } */
 
 main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1:hover {
-    color: lightgreen;
     background-color:rgb(253, 195, 35);
+    color: rgb(185, 113, 113);
 }
 
 main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2:hover {
-    color: rgb(185, 113, 113);
+        color: lightgreen;
+    background-color: rgb(253, 195, 35);
+}
+
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i3:hover {
+    color: rgb(139, 206, 210);
     background-color: rgb(253, 195, 35);
 }
 
@@ -272,18 +282,25 @@ footer p{
         padding: 2%;
         width: 88%;
     }
+
     main .botom-div-todo .botom-list-todo .botom-listli .liP {
         padding: 2%;
     }
     main .botom-div-todo .botom-list-todo .botom-listli .icon-box {
         width: 100%;
     }
-    main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1,
-        .icon-box .i2 {
-        padding: 2%;
+    /* main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1,
+        .icon-box .i2 , .i3 {
+        padding: 1%;
         width: 20%;
-    }
+    } */
 
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1,
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2,
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i3 {
+    padding: 8px;
+    width: 20%;
+}
 
 }
  
@@ -292,7 +309,7 @@ footer p{
  
     header h1 {
             font-size: 28px;
-            width: 85%;
+            width: 90%;
         }
         main form {
             width: 88%;
@@ -300,6 +317,7 @@ footer p{
         main input {
             padding: 2%;
             font-size: 12px;
+            /* width: 99%; */
         }
         main button {
             padding: 2%;
@@ -312,7 +330,7 @@ footer p{
             margin: .5%;
         }
         main .botom-div-todo .botom-list-todo {
-            width: 60%;
+            width: 90%;
         }
         main .botom-div-todo .botom-list-todo .botom-listli {
             padding: 2%;
@@ -322,13 +340,14 @@ footer p{
             padding: 2%;
         }
         main .botom-div-todo .botom-list-todo .botom-listli .icon-box {
-            width: 100%;
+            width: 80%;
         }
-        main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1,
-                 .icon-box .i2 {
-            padding: 2%;
-            width: 20%;
-        }
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1,
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2,
+main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i3 {
+    padding: 8px;
+    width: 20%;
+}
 
 
 }
