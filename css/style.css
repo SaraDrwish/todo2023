@@ -181,6 +181,13 @@ main .botom-div-todo .botom-list-todo .botom-listli .icon-box {
 i {
     background-color: unset;
 }
+
+.rightbtnTogl{
+    text-decoration: line-through;
+    color: #8ead85 ;
+    background-color: #bdd2b7da !important;
+}
+
 main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i1 ,
 main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i2 , 
 main .botom-div-todo .botom-list-todo .botom-listli .icon-box .i3  {
