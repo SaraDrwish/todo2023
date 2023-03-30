@@ -93,20 +93,18 @@ window.addEventListener('load', () => {
 // end editbtn.addEventListener("click"
         })
         
-
-
-
       
-todosfltr.addEventListener("change", selectTodofilter );
+        const todos = listUl.childNodes;
+        const item = e.target;
+        // const todo = listli.classList;
+        const t = item.parentElement;
 
 function selectTodofilter(e) {
-    const todos = listUl.childNodes;
-    console.log(todos);
-
-    // const item = e.target;
-    // const todo = item.parentElement;
-
+    
     todos.forEach(function(t) {
+            console.log(t);
+             console.log(todos);
+
         switch(e.target.value) {
             case "all": 
                 listli.style.display = "flex";
@@ -127,21 +125,18 @@ function selectTodofilter(e) {
                 break;
             
         }
+        //   console.log(todo);
+        //      console.log(todos);
     });
-    }  
-
+        }  
+        
+todosfltr.addEventListener("change", selectTodofilter );
 
  //ADDING TO LOCAL STORAGE 
     // saveLocalTodos(inp.value);
 
-
 //end document.addEventListener("submit"
     });
-
-
-
-    
-
 
 
 
@@ -167,8 +162,6 @@ function selectTodofilter(e) {
 //         }
 //     }
  
-
-
 
 
 
